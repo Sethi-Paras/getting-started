@@ -13,7 +13,7 @@ COPY app/src ./src
 
 # Run tests to validate app
 FROM app-base AS test
-RUN yarn install
+RUN yarn install --force
 RUN yarn test
 
 # Clear out the node_modules and create the zip
